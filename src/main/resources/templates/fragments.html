@@ -27,5 +27,18 @@
         </div>
     </div>
 
+    <table th:fragment="list-jobs-loop" class="job-listing" >
+        <tr th:each="job : ${jobs}">
+            <td th:utext="
+            'ID: ' + ${job.id} + '<br>'+
+            'Name: ' + ${job.name} + '<br>'+
+            'Employer: ' + ${job.employer} + '<br>'+
+            'Location: ' + ${job.location} + '<br>'+
+            'Position Type: ' + ${job.positionType} + '<br>'+
+            'Core Competency: ' + ${job.coreCompetency} + '<br>'"></td>
+        </tr>
+
+    </table>
+
 </body>
 </html>
